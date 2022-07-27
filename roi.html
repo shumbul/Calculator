@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8">
+<!-- bootstrap -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- css -->
+<link rel="stylesheet" href="index.css">
+<title>  Calculate</title>
+
+<body>
+    <div>
+        <div class="col-lg-12">
+            <h3 class="mb-3">  Calculate</h3>
+            <p class="home-desc mb-3">
+                Simply input your organizations number of employees, estimate the number of applications (on average)
+                your employees need to access, and make an estimate to the number of forgotten passwords they make (we
+                estimate on average each employee forgets their password once a year for each application).
+                <p style="color: #F96700">Using the slider bar or by overwriting the numbers in the orange boxes, enter
+                    your organizations number of employees, and an estimate of the number of applications they use.</p>
+            </p>
+        </div>
+        <div>
+            <!-- Number of employees -->
+            <div class="col-lg-6" style="display: inline-block; vertical-align: top;">
+                <div class="form-group">
+                    <label for="num_emplyees">Number of employees</label>
+                    <input 
+                        name="num_emplyees" 
+                        id="num_emplyees" 
+                        type="number" 
+                        class="form-control" 
+                        placeholder="20,000"
+                        value="20000"
+                        style="border-color: rgb(249, 103, 0);"
+                        oninput="Calculate()" 
+                        onchange="Calculate()"
+                    >
+                </div>
+            </div>
+            <!-- Average number of business oriented applications per user -->
+            <div class="col-lg-6" style="display: inline-block; vertical-align: top;">
+                <div class="form-group">
+                    <label for="avg_num_business_per_user">Average number of business oriented applications per user</label>
+                    <input 
+                        name="avg_num_business_per_user" 
+                        id="avg_num_business_per_user" 
+                        type="number"
+                        class="form-control" 
+                        placeholder="15" 
+                        value="15"
+                        style="border-color: rgb(249, 103, 0);"
+                        oninput="Calculate()" 
+                        onchange="Calculate()"
+                    >
+                </div>
+            </div>
+            <!-- Password resets per employee per application per annum -->
+            <div class="col-lg-6" style="display: inline-block; vertical-align: top;">
+                <div class="form-group">
+                    <label for="pass_resets">Password resets per employee per application per annum</label>
+                    <input 
+                        name="pass_resets" 
+                        id="pass_resets" 
+                        type="number" 
+                        class="form-control" 
+                        placeholder="1"
+                        value="1"
+                        style="border-color: inherit;"
+                        oninput="Calculate()" 
+                        onchange="Calculate()"
+                    >
+                    </div>
+            </div>
+
+            <!-- Number of password resets per year -->
+            <div class="col-lg-6" style="display: inline-block; vertical-align: top;">
+                <div class="form-group">
+                    <label for="num_pass_resets">Number of password resets per year</label>
+                    <span 
+                        id="num_pass_resets" 
+                        style="display: block; font-size: 20px; color: rgb(34, 34, 34); padding: 21px 0px;"
+                        value="30000"
+                    >
+                    30000
+                    </span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Average call cost per password reset* -->
+            <div class="col-lg-6" style="display: inline-block; vertical-align: top;">
+                <div class="form-group">
+                    <label for="avg_cost_pw_reset">Average call cost per password reset*</label>
+                    <input 
+                        name="avg_cost_pw_reset" 
+                        id="avg_cost_pw_reset" 
+                        type="number" 
+                        class="form-control"
+                        placeholder="12.50"
+                        value="12.5"
+                        style="border-color: inherit;"
+                        oninput="Calculate()" 
+                        onchange="Calculate()"
+                    >
+                    </div>
+            </div>
+
+            <!-- Cost of wasted time on password reset calls to help desk -->
+            <div class="col-lg-6" style="display: inline-block; vertical-align: top;">
+                <div class="form-group">
+                    <label for="cost_wasted">Cost of wasted time on password reset calls to help desk</label>
+                    <span
+                        id="cost_wasted"
+                        style="display: block; font-size: 20px; color: rgb(34, 34, 34); padding: 21px 0px;"
+                    >
+                    3750000                     
+                    </span>
+                </div>
+            </div>
+
+            <!-- Percentage saved by self service capability -->
+            <div class="col-lg-6" style="display: inline-block; vertical-align: top;">
+                <div class="form-group">
+                    <label for="percentage_saved">Percentage saved by self service capability</label>
+                    <input 
+                        name="percentage_saved" 
+                        id="percentage_saved" 
+                        type="number" 
+                        class="form-control"
+                        placeholder="50%" 
+                        value="50"
+                        style="border-color: inherit;"
+                        oninput="Calculate()" 
+                        onchange="Calculate()"
+                    >
+                </div>
+            </div>
+            <!-- Total savings -->
+            <div class="col-lg-6" style="display: inline-block; vertical-align: top;">
+                <div class="form-group">
+                    <label for="total_savings">Total savings</label>
+                    <span
+                        id="total_savings"
+                        style="display: block; font-size: 30px; color: rgb(249, 103, 0); padding: 21px 0px;"
+                    >
+                    1312500
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function Calculate() {
+            document.getElementById("num_pass_resets").innerHTML = 
+                document.getElementById("num_emplyees").value 
+                * document.getElementById("avg_num_business_per_user").value
+                * document.getElementById("pass_resets").value;
+            
+            document.getElementById("cost_wasted").innerHTML = 
+                document.getElementById("num_pass_resets").innerHTML
+                * document.getElementById("avg_cost_pw_reset").value;
+
+            document.getElementById("total_savings").innerHTML = 
+                document.getElementById("cost_wasted").innerHTML
+                * document.getElementById("percentage_saved").value/100;
+        }
+    
+    </script>
+</body>
+</html>
