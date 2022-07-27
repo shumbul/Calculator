@@ -20,9 +20,6 @@
                 Simply input your organizations number of employees, estimate the number of applications (on average)
                 your employees need to access, and make an estimate to the number of forgotten passwords they make (we
                 estimate on average each employee forgets their password once a year for each application).
-                <p style="color: #F96700">Using the slider bar or by overwriting the numbers in the orange boxes, enter
-                    your organizations number of employees, and an estimate of the number of applications they use.</p>
-            </p>
         </div>
         <div>
             <!-- Number of employees -->
@@ -118,7 +115,7 @@
                         id="cost_wasted"
                         style="display: block; font-size: 20px; color: rgb(34, 34, 34); padding: 21px 0px;"
                     >
-                    3750000                     
+                    $3750000                     
                     </span>
                 </div>
             </div>
@@ -148,7 +145,7 @@
                         id="total_savings"
                         style="display: block; font-size: 30px; color: rgb(249, 103, 0); padding: 2px 0px;"
                     >
-                    1312500
+                    $1312500
                     </span>
                 </div>
             </div>
@@ -157,18 +154,24 @@
     
     <script>
         function Calculate() {
-            document.getElementById("num_pass_resets").innerHTML = 
-                document.getElementById("num_emplyees").value 
+            document.getElementById("num_pass_resets").value = 
+                (document.getElementById("num_emplyees").value 
                 * document.getElementById("avg_num_business_per_user").value
-                * document.getElementById("pass_resets").value;
+                * document.getElementById("pass_resets").value);
             
-            document.getElementById("cost_wasted").innerHTML = 
-                document.getElementById("num_pass_resets").innerHTML
-                * document.getElementById("avg_cost_pw_reset").value;
+            document.getElementById("num_pass_resets").innerHTML = document.getElementById("num_pass_resets").innerHTML;
 
-            document.getElementById("total_savings").innerHTML = 
-                document.getElementById("cost_wasted").innerHTML
+            document.getElementById("cost_wasted").value = 
+                document.getElementById("num_pass_resets").value
+                * document.getElementById("avg_cost_pw_reset").value;
+            
+            document.getElementById("cost_wasted").innerHTML = "$" + document.getElementById("cost_wasted").value;
+
+            document.getElementById("total_savings").value = 
+                document.getElementById("cost_wasted").value
                 * document.getElementById("percentage_saved").value/100;
+
+            document.getElementById("total_savings").innerHTML = "$" + document.getElementById("total_savings").value;
         }
     
     </script>
