@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="style.css">
+
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="testjsfile.js"></script>
+
+
+<!-- bootstrap -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- css -->
+
+</head>
+
+<body>
+	<style>
+		body{
+			background-image: url("C:\pex1.jpg");
+
+		}
+	</style>
+
+
+
+
+		<header class="text-gray-600 body-font" style="background-color:black; font:Arial;">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      
+
+      
+	  	<img src="C:\Captureey.png" alt="..." height="10">
+    </a>
+
+      <span class="ml-3 text-xl"style="color:white; "><h3 style="font-weight:bolder">WORKFORCE ROI CALCULATOR</h3></span>
+    </a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center" style="font-family:sans-serif;font-weight: bold ;color: white; font-size:16px;" >
+      <a href="/"class="mr-5 hover:text-gray-900" style="color: white;" >HOME</a>
+      <a href="/"class="mr-5 hover:text-gray-900" style="color: white;" >ABOUT</a>
+      <a href="/" class="mr-5 hover:text-gray-900" style="color: white;"> DASHBOARD</a>
+      <a href="/" class="mr-5 hover:text-gray-900" style="color: white;" >USER PROVISIONING</a>
+      <a href="/" style="color: white;" >RECOMMENDATIONS</a>
+    </nav>
+
+    
+  </div>
+</header>
+
+ <section class="text-gray-600 body-font overflow-hidden" style="background-image: url('C:\pex1.jpg'); " >
+  <div class="container px-5 py-24 mx-auto" style=" width:float; color:black; ;background-image: url('C:\pex1.jpg'); ">
+  	<p><h3>This simple calculator highlights the potential savings of the Single Sign-On solution</h3></p>
+    <div class="lg:w-4/5 mx-auto flex flex-wrap" style=" margin-left:0; margin-right:0px; ">
+      <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="C:\latestimg.png">
+      <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0" style=" width:float; left-margin:50px; ">
+        
+
+<div class="form-group">
+                    <label for="In1">Numbers of employees</label>
+                    <input 
+                       
+                        type="number" 
+                        class="form-control" 
+                        id="In_a"
+                        placeholder="20,000"
+                      oninput="roi()" onchange="roi()"
+                        style="border-color: rgb(249, 103, 0);"
+                        
+                    >
+                    
+        
+
+
+                    <label for="In2">Avg number of applications employees accesses every month</label>
+                    <input 
+                       
+                        type="number" 
+                        class="form-control" 
+                        id="In_b"
+                        placeholder=""
+                        oninput="roi()" onchange="roi()"
+                        style="border-color: rgb(249, 103, 0);"
+                       
+                    ><br>
+                    
+        
+
+
+     <label for="In3">Average hourly rate per employee</label><br>
+                    <span
+                        id="out_c"
+                        oninput="roi()" onchange="roi()"
+                        style="display: block;  color:green;"
+                    > $25
+                    </span> <br>
+
+                    
+                    
+        
+
+<label for="In4">Time taken for single correct login per user in minutes</label>
+                    <input 
+                      
+                        type="number" 
+                        class="form-control" 
+                        id="In_d"
+                        placeholder=""
+                     oninput="roi()" onchange="roi()"
+                        style="border-color: rgb(249, 103, 0);"
+                        
+                    >
+               
+           
+
+             <label for="In5">SSO Logins per user per month</label>
+                    <input 
+                     
+                        type="number" 
+                        class="form-control" 
+                        id="In_e"
+                        placeholder=""
+                       oninput="roi()" onchange="roi()"
+                        style="border-color: rgb(249, 103, 0);"
+                        
+                    >       
+          
+
+        <label id="out6">Cost savings on SSO login  </label><br><span
+                        id="out_o"
+                        style="display: block;  color: rgb(249, 103, 0);"
+                    >
+                    $131
+                    </span> 
+
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<br><br><br>
+
+
+<footer class="text-gray-600 body-font" style="margin-bottom:0;">
+  <div class="bg-gray-100" style="background-color:black;color: white; font-family: sans-serif; font-weight: bold;">
+    <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        
+      </a>
+      <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2022 Workforce Calculator
+        <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@Zarkashan</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-gray-500">Contact us @ 234599198</a></span>
+        
+
+
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+	
+	
+
+
+</body>
+</html>
