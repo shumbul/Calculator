@@ -5,7 +5,9 @@ function roi() {
     var e = document.getElementById("In_e").value;
     t = e * 1.5 * 22
 
-    var c = document.getElementById("In_c").value;
+    // ISSUE is here, In_c was not define
+    // var c = document.getElementById("In_c").value;
+    var c = document.getElementById("In_a").value;
     var d = document.getElementById("In_d").value;
     var t = h * 33
     var m = i / 60;
