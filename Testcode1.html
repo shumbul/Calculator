@@ -36,7 +36,7 @@
 <body>
   <style>
     body {
-      background-image: url("C:\pex1.jpg");
+      background-image: url("pex1.jpg");
 
     }
   </style>
@@ -50,7 +50,7 @@
 
 
 
-        <img src="C:\Captureey.png" alt="..." height="10">
+        <img src="Captureey.png" alt="..." height="10">
       </a>
 
       <span class="ml-3 text-xl" style="color:white; ">
@@ -61,7 +61,7 @@
         style="font-family:sans-serif;font-weight: bold ;color: white; font-size:16px;">
         <a href="/" class="mr-5 hover:text-gray-900" style="color: white;">HOME</a>
         <a href="/" class="mr-5 hover:text-gray-900" style="color: white;">ABOUT</a>
-        <a href="/" class="mr-5 hover:text-gray-900" style="color: white;"> DASHBOARD</a>
+        <a href="/" class="mr-5 hover:text-gray-900" style="color: white;">DASHBOARD</a>
         <a href="/" class="mr-5 hover:text-gray-900" style="color: white;">USER PROVISIONING</a>
         <a href="/" style="color: white;">RECOMMENDATIONS</a>
       </nav>
@@ -70,15 +70,15 @@
     </div>
   </header>
 
-  <section class="text-gray-600 body-font overflow-hidden" style="background-image: url('C:\pex1.jpg'); ">
+  <section class="text-gray-600 body-font overflow-hidden" style="background-image: url('pex1.jpg'); ">
     <div class="container px-5 py-24 mx-auto"
-      style=" width:float; color:black; ;background-image: url('C:\pex1.jpg'); ">
+      style=" width:float; color:black; ;background-image: url('pex1.jpg'); ">
       <p>
         <h3>This simple calculator highlights the potential savings of the Single Sign-On solution</h3>
       </p>
       <div class="lg:w-4/5 mx-auto flex flex-wrap" style=" margin-left:0; margin-right:0px; ">
         <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-          src="C:\latestimg.png">
+          src="latestimg.png">
         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0" style=" width:float; left-margin:50px; ">
 
 
@@ -86,38 +86,39 @@
             <label for="In1">Numbers of employees</label>
             <input type="number" class="form-control" id="In_a" placeholder="20,000" oninput="roi()" onchange="roi()"
               style="border-color: rgb(249, 103, 0);">
+          </div>
 
 
-
-
+          <div class="form-group">
             <label for="In2">Avg number of applications employees accesses every month</label>
             <input type="number" class="form-control" id="In_b" placeholder="" oninput="roi()" onchange="roi()"
               style="border-color: rgb(249, 103, 0);"><br>
+            </div>
 
 
 
-
+            <div class="form-group">
             <label for="In3">Average hourly rate per employee</label><br>
-            <span id="out_c" oninput="roi()" onchange="roi()" style="display: block;  color:green;"> $25
+            <span id="out_c" value ="25" style="display: block;  color:green;"> $25
             </span> <br>
-
+            </div>
 
 
 
 
             <label for="In4">Time taken for single correct login per user in minutes</label>
-            <input type="number" class="form-control" id="In_d" placeholder="" oninput="roi()" onchange="roi()"
+            <input type="number" class="form-control" id="In_d" placeholder="10" value="10" oninput="roi()" onchange="roi()"
               style="border-color: rgb(249, 103, 0);">
 
 
 
             <label for="In5">SSO Logins per user per month</label>
-            <input type="number" class="form-control" id="In_e" placeholder="" oninput="roi()" onchange="roi()"
+            <input type="number" class="form-control" id="In_e" placeholder="15000" value="15000" oninput="roi()" onchange="roi()"
               style="border-color: rgb(249, 103, 0);">
 
 
-            <label id="out6">Cost savings on SSO login </label><br><span id="out_o"
-              style="display: block;  color: rgb(249, 103, 0);">
+            <label id="out6">Cost savings on SSO login </label><br>
+            <span id="out_o" value="131" style="display: block;  color: rgb(249, 103, 0);">
               $131
             </span>
 
@@ -125,7 +126,6 @@
 
         </div>
       </div>
-    </div>
     </div>
   </section>
 
